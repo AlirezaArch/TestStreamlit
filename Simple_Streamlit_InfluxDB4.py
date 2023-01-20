@@ -17,8 +17,8 @@ st.title("Cooling System Condition Monitoring")
 #left_column, middle_column, right_column = st.columns(3)
 #tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
 
-#inf_url="http://192.168.100.16:8086"
-inf_url="http://10.58.17.31:8086"
+inf_url="http://192.168.100.16:8086"
+#inf_url="http://10.58.17.31:8086"
 bucket="analytics-poc"
 inf_org="ABB"
 inf_token="l6isxGFafI9UmH0VCCgrnV6N6-H_--R7ivFzGVigbrmv2fimDVTsfI63iJTnwc8R1tlUTpnHjKnFxqqXwQsD1Q=="
@@ -41,10 +41,7 @@ plot2=st.empty()
 #     plot2=st.empty()
 
 
-CONFIG_INFLUXDB = "config_influxdb.json"
 
-
-CONF_FILE_DIRECTORY = "init/"
 
 query_SPE = 'from(bucket: "analytics-poc")\
   |> range(start:-200s )\
